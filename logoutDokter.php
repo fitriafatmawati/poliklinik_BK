@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['nama'])) {
     // Hapus session
     session_unset();
     session_destroy();

@@ -1,7 +1,7 @@
 <?php
 
 $databaseHost = 'localhost';
-$databaseName = 'poliklinik';
+$databaseName = 'poliklinik_bk';
 $databaseUsername = 'root';
 $databasePassword = '';
 

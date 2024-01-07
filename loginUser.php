@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
+            <div class="card" style="background-color: #A9A9A9;">
                 <div class="card-header text-center" style="font-weight: bold; font-size: 32px;">Login</div>
                 <div class="card-body">
                     <form method="POST" action="index.php?page=loginUser">
@@ -56,9 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </div>
                     </form>
-                    <div class="text-center">
-                        <p class="mt-3">Belum punya akun? <a href="index.php?page=registerUser">Register</a></p>
-                    </div>
                 </div>
             </div>
         </div>

@@ -2,7 +2,6 @@
 if (!isset($_SESSION)) {
     session_start();
 }
-
     include_once("koneksi.php");
 ?>
 
@@ -11,11 +10,12 @@ if (!isset($_SESSION)) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>SisFo Poliklinik</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-expand-lg navbar-light bg-light pt-2 ps-4 pe-3 shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Sistem Informasi Poliklinik</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,28 +24,24 @@ if (!isset($_SESSION)) {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="berandaDokter.php">Home</a>
                     </li>
                     <?php
                         if (isset($_SESSION['nama'])){
                             //menu master jika user sudah login 
                     ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data Pasien</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="index.php?page=obat">Jadwal Periksa</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="index.php?page=obat">Pasien</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="index.php?page=obat">Periksa</a>
-                                </li>
-                            </ul>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="berandaDokter.php?page=periksa">Periksa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.php?page=profildokter">Profil Dokter</a>
+                            <a class="nav-link" aria-current="page" href="berandaDokter.php?page=riwayatPasien">Riwayat Pasien</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="berandaDokter.php?page=jadwalDokter">Jadwal Dokter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="berandaDokter.php?page=profilDokter">Profil Dokter</a>
                         </li>
                     <?php 
                         } 
@@ -89,13 +85,38 @@ if (!isset($_SESSION)) {
         if (isset($_GET['page'])) {
             include($_GET['page'] . ".php");
         } else {
-            echo "<br><h2>Selamat Datang Dokter di Sistem Informasi Poliklinik";
+            echo "<br><h2>Selamat Datang Dokter ";
 
             if (isset($_SESSION['nama'])) {
                 //jika sudah login tampilkan nama
-                echo ", " . $_SESSION['nama'] . "</h2><hr>";
+                echo " " . $_SESSION['nama'] . " , di Sistem Informasi Poliklinik</h2><hr> ";
             } else {
-                echo "</h2><hr>Silakan Login untuk menggunakan sistem. Jika belum memiliki akun silakan Register terlebih dahulu.";
+                echo '
+                    <section class="about_section pt-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5 ">
+                                    <div class="img-box">
+                                        <img src="img/about1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-box">
+                                        <div class="heading_container">
+                                            <h3>
+                                                Selamat datang di Poliklinik Sehat Bahagia! <span></span>
+                                            </h3>
+                                        </div>
+                                        <p class="aboutpoli" style="font-size: 16px;">
+                                            Kami adalah pusat layanan kesehatan yang berkomitmen untuk memberikan pelayanan terbaik kepada pasien kami. 
+                                            Dengan staf medis yang berpengalaman dan fasilitas terkini, Poliklinik Sehat Bahagia menjadi pilihan utama untuk perawatan kesehatan Anda.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    ';
             }
         }
     ?>

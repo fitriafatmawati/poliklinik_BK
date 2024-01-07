@@ -18,6 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result->fetch_assoc();
         if (($no_hp == $row['no_hp'])) {
             $_SESSION['nama'] = $nama;
+            $_SESSION['id'] = $row['id'];
             header("Location: berandaDokter.php");
         } else {
             $error = "Password salah";
@@ -32,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header text-center" style="font-weight: bold; font-size: 32px;">Login</div>
+                <div class="card-header text-center" style="font-weight: bold; font-size: 32px; background-color: #A9A9A9;">Login</div>
                 <div class="card-body">
                     <form method="POST" action="index.php?page=loginDokter">
                         <?php

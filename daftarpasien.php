@@ -13,10 +13,24 @@
             $row = $result->fetch_assoc();
             $_SESSION['nama'] = $nama;
             $_SESSION['id_pasien'] = $row['id'];
-            header("Location: index.php?page=daftarpoli&no_rm=$no_rm");
+            header("Location: index.php?page=daftarPoli&no_rm=$no_rm");
         } else {
             $error = "No. Rekam Medis tidak ditemukan";
         }
+
+        // if ($no_ktp === $confirm_ktp) {
+        //     $query = "SELECT * FROM pasien WHERE no_rm = '$no_rm'";
+        //     $result = $mysqli->query($query);
+
+        //     if (!$result) {
+        //         die("Query error: " . $mysqli->error);
+        //     }
+
+        //     header("Location: index.php?page=rawatJalan");
+
+        // } else {
+        //     $error = "No. Rekam Medis tidak ditemukan";
+        // }
     }
 ?>
 
@@ -37,14 +51,14 @@
             ?>
             <div class="form-group mb-3">
                 <label for="no_rm">Nomor RM</label> 
-                <input type="text" name="no_rm" class="form-control form-control-lg bg-light fs-6" placeholder="Enter your nomorrm" required>
+                <input type="text" name="no_rm" class="form-control" placeholder="Enter your no_rm" required>
             </div>
             
             <div class="form-group mb-3">
                 <button class="btn btn-lg btn-primary w-100 fs-6" type="submit">Cari</button>
             </div>
             <div class="text-center">
-                <p class="mt-3"><a href="index.php?page=daftarpasienbaru">Daftar pasien baru</a></p>
+                <p class="mt-3"><a href="index.php?page=daftarPasienBaru" style="text-decoration: none;">pasien baru</a></p>
             </div>
         </form>
     </div>
