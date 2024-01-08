@@ -10,7 +10,7 @@ if (!isset($_SESSION)) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SisFo Poliklinik</title>
+    <title>Klinik PANASEA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -97,20 +97,16 @@ if (!isset($_SESSION)) {
                             <div class="row">
                                 <div class="col-md-5 ">
                                     <div class="img-box">
-                                        <img src="img/about1.png" alt="">
+                                        <img src="img/klinik.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="detail-box">
                                         <div class="heading_container">
                                             <h3>
-                                                Selamat datang di Poliklinik Sehat Bahagia! <span></span>
+                                                Selamat datang di klinik PANASEA! <span></span>
                                             </h3>
                                         </div>
-                                        <p class="aboutpoli" style="font-size: 16px;">
-                                            Kami adalah pusat layanan kesehatan yang berkomitmen untuk memberikan pelayanan terbaik kepada pasien kami. 
-                                            Dengan staf medis yang berpengalaman dan fasilitas terkini, Poliklinik Sehat Bahagia menjadi pilihan utama untuk perawatan kesehatan Anda.
-                                        </p>
                                     </div>
                                 </div>
                             </div>

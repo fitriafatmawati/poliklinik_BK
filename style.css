@@ -1,0 +1,125 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background: #ececec; */
+}
+
+main{
+    padding-top: 5.5rem;
+}
+
+.navbar-brand{
+    font-size: 30px !important;
+    font-weight: bold;
+    color: #eb2626 !important;
+}
+.navbar-brand:hover{
+    font-size: 25px;
+    font-weight: bold;
+    color: #e07b94 !important;
+}
+
+nav{
+    color: #eb2626 !important;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    color: #eb2626 !important;
+}
+
+.about_section .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.about_section .img-box img {
+    max-width: 80%;
+}
+
+.about_section .detail-box p {
+    color: #eb2626;
+    margin-top: 15px;
+}
+
+.about_section .detail-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #252525;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.about_section .detail-box a:hover {
+    background-color: #0c0c0c;
+}
+
+.heading_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+
+.heading_container h2 {
+    position: relative;
+    font-weight: bold;
+}
+
+.heading_container h2 span {
+    color: #e07b94;
+}
+
+.heading_container.heading_center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+}
+
+.aboutpoli{
+    text-align: justify;
+    font-size: 24px !important;
+}
+.detail-box2{
+    font-family: 'Roboto', sans-serif;
+}
+.detail-box2 .keterangan{
+    text-align: justify;
+}
+.detail-box2 h2{
+    font-weight: bold !important;
+}
+
+------------ Login container ------------
+
+.loginpage {
+    background-color: #eb2626;
+}
+.box-area{
+    width: 930px;
+}
+
+------------ Right box ------------
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+
